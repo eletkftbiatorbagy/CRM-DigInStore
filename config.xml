@@ -1,4 +1,4 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="hu.elet.crm.diginstore" version="1.0.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="hu.e-let.diginstore.crm" version="1.0.0">
   <name>crm_diginstore</name>
   <description>CRM DigInStore</description>
   <author href="http://e-let.hu" email="e-let@e-let.hu">e-LET Kft Hungary</author>
