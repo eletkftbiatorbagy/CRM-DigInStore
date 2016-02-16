@@ -44,6 +44,14 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
     	
+    	var done = function(status){
+ 		  console.log('QRScanner is initialized. Status:');
+		  console.dir(status);
+		};
+
+		QRScanner.prepare(done);
+    	
+    	
     }
     
     
@@ -56,16 +64,7 @@ var app = {
 
 
 function scan(){
-	cordova.plugins.barcodeScanner.scan(
-      function (result) {
-          alert("We got a barcode\n" +
-                "Result: " + result.text + "\n" +
-                "Format: " + result.format + "\n" +
-                "Cancelled: " + result.cancelled);
-      }, 
-      function (error) {
-          alert("Scanning failed: " + error);
-      }
-   );
+	QRScanner.show();
+	
 }
 
