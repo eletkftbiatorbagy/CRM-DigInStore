@@ -79,8 +79,6 @@
     <allow-intent href="itms-apps:*"/>
   </platform>
   
-  <platform name="ios">
-    <hook type="after_platform_add" src="plugins/cordova-plugin-qrscanner/scripts/swift-support.js" />
-  </platform>
+  <plugin name="net.roughshod.plugins.barcodescanner" spec="3.0.0" source="pgb" />
   
 </widget>

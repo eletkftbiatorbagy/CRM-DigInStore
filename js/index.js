@@ -43,8 +43,7 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-    	console.log("QR init");
-    	QRScanner.prepare(onDone);
+    	
     }
     
     
@@ -54,26 +53,19 @@ var app = {
     
 };
 
-function onDone(status){
-	console.log("ONDONE");
-  if (!status.authorized) {
-    // the video preview will remain black, and scanning is disabled 
-    // you can try asking the user again, but you'll have to use `QRScanner.openSettings()`. 
-  }
-}
+
 
 function scan(){
-	QRScanner.show();
-	console.log("most jön a scan...");
-	QRScanner.scan(displayContents); // scan until something is found 
+	cordova.plugins.barcodeScanner.scan(
+      function (result) {
+          alert("We got a barcode\n" +
+                "Result: " + result.text + "\n" +
+                "Format: " + result.format + "\n" +
+                "Cancelled: " + result.cancelled);
+      }, 
+      function (error) {
+          alert("Scanning failed: " + error);
+      }
+   );
 }
 
-function displayContents(text){
-  alert(text);
-}
-
-var QR = function (text){
-  alert("QR : "+text);
-}
-
-var onFailure = function(param){ alert(param); }
