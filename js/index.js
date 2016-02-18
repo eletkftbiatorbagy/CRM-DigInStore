@@ -49,7 +49,7 @@ var app = {
 		  console.dir(status);
 		};
 
-		QRScanner.prepare(done);
+		
     	
     	
     }
@@ -64,7 +64,17 @@ var app = {
 
 
 function scan(){
-	QRScanner.show();
+	cordova.plugins.barcodeScanner.scan(
+      function (result) {
+          alert("We got a barcode\n" +
+                "Result: " + result.text + "\n" +
+                "Format: " + result.format + "\n" +
+                "Cancelled: " + result.cancelled);
+      }, 
+      function (error) {
+          alert("Scanning failed: " + error);
+      }
+   );
 	
 }
 
