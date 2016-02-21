@@ -1,17 +1,20 @@
-var app = {
-    initialize: function() {
-        this.bindEvents();
-    },
-    
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-    }	
-    }
-};
+var app = 	{
+				initialize: function() {
+					this.bindEvents();
+				},
+	
+				bindEvents: function() {
+					document.addEventListener('deviceready', this.onDeviceReady, false);
+				},
+	
+				onDeviceReady: function() {
+	
+					setTimeout(function() {
+						navigator.splashscreen.hide();
+					}, 3000);
+		
+				}	
+    		};
 
 
 

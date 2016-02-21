@@ -2,6 +2,7 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
+
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
@@ -19,35 +20,112 @@ body {
     );
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
     height:100%;
     margin:0px;
     padding:0px;
     text-transform:uppercase;
     width:100%;
+    box-sizing: border-box;
+    font-size: 2vh;
 }
 
-/* Portrait layout (default) */
-.app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
+/* FEJLÉC */
+header {
+    position:absolute;
+    left:0%;
+    top:0%;
+    height:8%;
+    width:100%;
+    color:#BCCE08;
+    background: #2D2045;
 }
-
-h1 {
-    font-size:24px;
+header.design {
+	box-shadow: 0px 10px 0px #93C016;
+}
+header img{  
+	height:80%;
+	margin:1%;
+}
+header h1 {
+	position:absolute;
+	top: 50%;
+    left: 50%;
+    width: 75%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size:4vh;
     font-weight:normal;
-    margin:0px;
+    margin-top:0;
     overflow:visible;
-    padding:0px;
     text-align:center;
+    line-height:4vh;
+}
+
+/* LÁBLÉC */
+footer {
+	position : absolute;
+	left:0%;
+    bottom:0%;
+    height:8%;
+    width:100%;
+    background: #2D2045;
+    padding: 1%;
+}
+footer img{
+	height:80%;
+	margin:1%;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/* ASZTAL */
+main {
+	position:absolute;
+	left:0%;
+    top:8%;
+    height:84%;
+    width:100%;
+    --background: white;
+    padding: 1%;
+}
+main button.nagy {
+	position:relative;
+	width: 80%;
+	height:18%;
+	border-radius: 2vh;
+	background-color:#E4E4E4;
+    background-image:linear-gradient(top, #2D2045 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #2D2045 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #2D2045 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #4D4065),
+        color-stop(0.51, #4D4065)
+    );
+    background-attachment:fixed;
+	border: 2px solid black;
+	padding:5%;
+	margin-left: 7%;
+	margin-top: 5%;
+ }
+main button img{
+	float:left;
+	height:12vh;
+	margin-top:-2vh;
+}
+main button span{
+	float:left;
+	font-size:6vw;
+	margin-top:0.8rem;
+	margin-left:6%;
+	color:#93C016;
+	font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+	font-variant: small-caps;
+	letter-spacing:.1em;
+	text-shadow: 0 0 5vh #dfdfdf;
 }
 
 @keyframes fade {
