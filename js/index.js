@@ -35,6 +35,7 @@ function iscroll_init()
 		{
 			if (!main.id) { main.id = "Main"+main.parentNode.id }
 			myscroll[main.id] = new IScroll(main);
+			console.log("iScroll : "+main.id);
 		}	
 	}
 }
