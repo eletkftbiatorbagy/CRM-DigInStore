@@ -26,7 +26,7 @@
 					<br><br>
 					<img id="auto_login" src="img/beki0.png"><span style="width:40vw;">Emlékezzen rám</span>
 					<br><br>
-					<button onclick="login();">Belépés</button>
+					<button ontouchstart="login();">Belépés</button>
 				</div>
 			</main>	
 			<footer>
@@ -44,7 +44,7 @@
 			</header>
 		
 			<main>
-				<button id="fomenu_felmeres" class="nagy" onclick="oldal(1)">
+				<button id="fomenu_felmeres" class="nagy" ontouchstart="oldal(1)">
 					<img src="img/ikon/checklist.png" />
 					<span>Felmérés</span>
 				</button>
@@ -75,7 +75,7 @@
 <!-- --------------------------------------------------------------------------------------------------------- -->		
 		<oldal id="1">
 			<header class="design">
-				<img src="img/ikon/vissza.png" onclick="vissza();">
+				<img src="img/ikon/vissza.png" ontouchstart="vissza();">
 				<h1>Felmérés</h1>
 				<img src="img/menu.png" style="float:right;">
 			</header>
@@ -84,8 +84,8 @@
 			</main>	
 			<footer>
 				<img src="img/ikon/tel.png"/ style="float:right;">
-				<img src="img/gomb/foto.png"/ class="gomb" onclick="uj_foto(1);">
-				<img src="img/gomb/log.png"/ class="gomb" onclick="uj_bejegyzes(1);";>
+				<img src="img/gomb/foto.png"/ class="gomb" ontouchstart="uj_foto(1);">
+				<img src="img/gomb/log.png"/ class="gomb" ontouchstart="uj_bejegyzes(1);";>
 			</footer>		
 		</oldal>
 		
@@ -98,23 +98,23 @@
 				<img src="img/menu.png" style="float:right;">
 			</header>
 			<main>
-				<button id="pos_legutobbi" class="nagy" onclick=" oldal(101)">
+				<button id="pos_legutobbi" class="nagy" ontouchstart=" oldal(101)">
 					<img src="img/ikon/last.png" />
 					<span>Legutóbbiak</span>
 				</button>
-				<button id="pos_gps" class="nagy" onclick="oldal(102)">
+				<button id="pos_gps" class="nagy" ontouchstart="oldal(102)">
 					<img src="img/ikon/gps.png" />
 					<span>GPS keresés</span>
 				</button>
-				<button id="pos_irsz" class="nagy" onclick="oldal(103)">
+				<button id="pos_irsz" class="nagy" ontouchstart="oldal(103)">
 					<img src="img/ikon/zip.png" />
 					<span>Irányítószám</span>
 				</button>
-				<button id="pos_lista" class="nagy" onclick="oldal(104)">
+				<button id="pos_lista" class="nagy" ontouchstart="oldal(104)">
 					<img src="img/ikon/customers.png" />
 					<span>Ügyféllistából</span>
 				</button>
-				<button id="pos_qr" class="nagy" onclick="oldal(105)">
+				<button id="pos_qr" class="nagy" ontouchstart="oldal(105)">
 					<img src="img/ikon/scan.png" />
 					<span>QR kód beolvasása</span>
 				</button>
@@ -127,15 +127,15 @@
 <!-- --------------------------------------------------------------------------------------------------------- -->		
 		<oldal id="101">
 			<header class="design">
-				<img src="img/ikon/vissza.png" onclick="vissza();">
+				<img src="img/ikon/vissza.png" ontouchstart="vissza();">
 				<h1>Legutóbbi ügyfelek</h1>
 				<img src="img/ikon/last.png" style="float:right;">
 			</header>
 			<main>
 				<ul>
-					<li onclick="kivalaszt();"><ol>1.</ol><div>Trafikmutyi Bt.,<br>1234 Jászkarafaszajenő,<br>Megoldjukokosba u. 1.</div></li>
-					<li onclick="kivalaszt();"><ol>2.</ol><div>Füstölj El Kft.,<br>1234 Bivalybasznád,<br>Cigi köz. 8.</div></li>
-					<li onclick="kivalaszt();"><ol>3.</ol><div>Köhögős Bt.,<br>1234 Alsószarfalva,<br>Tűdőgyógyász út. 1.</div></li>
+					<li ontouchstart="kivalaszt();"><ol>1.</ol><div>Trafikmutyi Bt.,<br>1234 Jászkarafaszajenő,<br>Megoldjukokosba u. 1.</div></li>
+					<li ontouchstart="kivalaszt();"><ol>2.</ol><div>Füstölj El Kft.,<br>1234 Bivalybasznád,<br>Cigi köz. 8.</div></li>
+					<li ontouchstart="kivalaszt();"><ol>3.</ol><div>Köhögős Bt.,<br>1234 Alsószarfalva,<br>Tűdőgyógyász út. 1.</div></li>
 				</ul>
 			</main>	
 			<footer>
@@ -145,7 +145,7 @@
 <!-- --------------------------------------------------------------------------------------------------------- -->		
 		<oldal id="102">
 			<header class="design">
-				<img src="img/ikon/vissza.png" onclick="vissza();">
+				<img src="img/ikon/vissza.png" ontouchstart="vissza();">
 				<h1>GPS keresés</h1>
 				<img src="img/ikon/gps.png" style="float:right;">
 			</header>
@@ -159,7 +159,7 @@
 <!-- --------------------------------------------------------------------------------------------------------- -->		
 		<oldal id="103">
 			<header class="design">
-				<img src="img/ikon/vissza.png" onclick="vissza();">
+				<img src="img/ikon/vissza.png" ontouchstart="vissza();">
 				<h1>Irányítószámos keresés</h1>
 				<img src="img/ikon/zip.png" style="float:right;">
 			</header>
@@ -173,7 +173,7 @@
 <!-- --------------------------------------------------------------------------------------------------------- -->		
 		<oldal id="104">
 			<header class="design">
-				<img src="img/ikon/vissza.png" onclick="vissza();">
+				<img src="img/ikon/vissza.png" ontouchstart="vissza();">
 				<h1>Ügyféllista</h1>
 				<img src="img/ikon/customers.png" style="float:right;">
 			</header>
@@ -187,7 +187,7 @@
 <!-- --------------------------------------------------------------------------------------------------------- -->
 		<oldal id="105">
 			<header class="design">
-				<img src="img/ikon/vissza.png" onclick="vissza();">
+				<img src="img/ikon/vissza.png" ontouchstart="vissza();">
 				<h1>QR kódos azonosítás</h1>
 				<img src="img/ikon/scan.png" style="float:right;">
 			</header>
