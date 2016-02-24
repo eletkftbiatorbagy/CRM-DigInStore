@@ -23,14 +23,19 @@ var app = 	{
     };
 })();
 
+var myscroll = [];
 
 function iscroll_init()
 {
-	var oldalak = document.getElementsByTagName("oldal");
-	for (var o=0; o<oldalak.length; o++)
+	var mains = document.getElementsByTagName("main");
+	for (var m=0; m<mains.length; m++)
 	{
-		var main = oldalak[o].getElementsByTagName("main")[0];
-		var myscroll = new IScroll(main);
+		var main = mains[m];
+		if (main.firstChild)
+		{
+			if (!main.id) { main.id = "Main"+main.parentNode.id }
+			myscroll[main.id] = new IScroll(main);
+		}	
 	}
 }
 
