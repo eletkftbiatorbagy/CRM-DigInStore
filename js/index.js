@@ -120,7 +120,7 @@ function uj_foto(ablak)
 							var img = document.createElement("img");
 								img.src = "data:image/jpeg;base64," + imageData;
 								img.className = "foto";
-							oldal_object(ablak).getElementsByTagName("main")[0].appendChild(img);		
+							oldal_object(ablak).getElementsByTagName("main")[0].getElementsByTagName("div")[0].appendChild(img);		
 						};
 
 	setTimeout(function() {
@@ -149,13 +149,16 @@ function uj_foto(ablak)
  
  function uj_bejegyzes(ablak)
  {
- 	var cim = document.createElement("div");
+ 	var cim = document.createElement("span");
  		cim.className = "bejegyzes_cim";
  	var d = new Date();
  		cim.innerHTML = "Szerző: " + "<strong>Kiss Attila<strong>" + "&nbsp;&nbsp;&nbsp;&nbsp;Bejegyzés dátuma : <strong>"+ d.getFullYear() + "." + d.getMonth()+1 + "." + d.getDate() +"&nbsp;&nbsp;" + d.getHours() + ":" + d.getMinutes()+"</strong>";
  	var txtarea = document.createElement("textarea");
  	    txtarea.className = "txtarea";
  	var main = oldal_object(ablak).getElementsByTagName("main")[0];
- 	main.appendChild(cim);
- 	main.appendChild(txtarea);
+ 	var div1 = main.getElementsByTagName("div")[0];
+ 	div1.appendChild(cim);
+ 	div1.appendChild(txtarea);
+ 	setTimeout(function () {
+ 			myscroll[main.id].refresh(); },0);
  }

@@ -141,11 +141,13 @@ main {
     width:100%;
     --background: white;
     padding: 1%;
+    overflow:hidden;
 }
+main div { display:block; padding-bottom: 5vh;  }
 main button.nagy {
 	position:relative;
 	width: 80%;
-	height:15%;
+	height:12vh;
 	border-radius: 2vh;
 	background-color:#E4E4E4;
     background-image:linear-gradient(top, #2D2045 0%, #E4E4E4 51%);
