@@ -1,4 +1,4 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="hu.e-let.diginstore.crm" version="1.0.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="hu.e-let.diginstore.crm" version="1.0.1">
   <name>crm_diginstore</name>
   <description>CRM DigInStore</description>
   <author href="http://e-let.hu" email="e-let@e-let.hu">e-LET Kft Hungary</author>
@@ -66,5 +66,8 @@
   </platform>
   
   <plugin name="net.roughshod.plugins.barcodescanner" spec="3.0.0" source="pgb" />
+  
   <plugin name="org.apache.cordova.camera" spec="0.3.6" source="pgb" />
+  <preference name="CameraUsesGeolocation" value="false" />
+  
 </widget>
