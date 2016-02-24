@@ -15,6 +15,16 @@ var app = 	{
 		
 				}	
     		};
+(function(){
+    var oldLog = console.log;
+    console.log = function (message) {
+        document.getElementById("CONSOLE").innerHTML += message + "<br>";
+        oldLog.apply(console, arguments);
+    };
+})();
+
+
+
 
 var OLDAL = 0;
 var Oldal_cache = [];
