@@ -59,7 +59,7 @@ function oldal_object(NR)
 	var obj;
 	for (var o=0; o<oldalak.length; o++)
 	{
-		if (oldalak(o).id==NR) { obj = oldalak(o); }
+		if (oldalak[o].id==NR) { obj = oldalak[o]; }
 	}
 	return obj;
 }
@@ -130,4 +130,18 @@ function uj_foto(ablak)
  window.onorientationchange = function() {
      var cameraPopoverOptions = new CameraPopoverOptions(0, 0, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
      cameraPopoverHandle.setPosition(cameraPopoverOptions);
+ }
+ 
+ 
+ function uj_bejegyzes(ablak)
+ {
+ 	var cim = document.createElement("div");
+ 		cim.className = "bejegyzes_cim";
+ 	var d = new Date();
+ 		cim.innerHTML = "Szerző: " + "<strong>Kiss Attila<strong>" + "&nbsp;&nbsp;&nbsp;&nbsp;Bejegyzés dátuma : <strong>"+ d.getFullYear() + "." + d.getMonth()+1 + "." + d.getDate() +"&nbsp;&nbsp;" + d.getHours() + ":" + d.getMinutes()+"</strong>";
+ 	var txtarea = document.createElement("textarea");
+ 	    txtarea.className = "txtarea";
+ 	var main = oldal_object(ablak).getElementsByTagName("main")[0];
+ 	main.appendChild(cim);
+ 	main.appendChild(txtarea);
  }

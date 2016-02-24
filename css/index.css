@@ -232,6 +232,16 @@ li div{
 	border: 2px solid #111111;
 	margin: 3vh 0;
 }
+.bejegyzes_cim{
+	margin-top: 2vh;
+}
+.txtarea {
+	width:90%;
+	height: 25vh;
+	border: 2px solid #111111;
+	margin: 0 0 1vh 0;
+	font: 2.5vh/3vh Verdana;
+}
 
 @keyframes fade {
     from { opacity: 1.0; }
