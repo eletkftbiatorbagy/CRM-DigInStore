@@ -29,6 +29,51 @@ body {
     font-size: 2vh;
 }
 
+oldal { display:none; }
+
+/*  LOGIN  */
+.fologo {  
+	--position:absolute;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40vw;
+	margin-top:5%;
+}
+.login {
+	display: block;
+	margin-top:15%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80vw;
+	text-align:left;
+}
+.login span{
+	float:left;
+	width:30vw;
+	font-size: 3vh;
+	height:5vh;
+	padding-top:1vh;
+	margin-right:3vw;
+	overflow: auto;
+}
+.login input{
+	height:5vh;
+	width:41vw;
+	font-size: 3vh;
+	padding: 0 2vw;
+}
+.login img {
+	height:5vh;
+	margin-right:5vw;
+	float:left;
+}
+.login button{
+	font-size:4vh;
+	margin-left:40vw;
+	width:30vw;
+}
+
 /* FEJLÉC */
 header {
     position:absolute;
@@ -71,12 +116,20 @@ footer {
     background: #2D2045;
     padding: 1%;
 }
-footer img{
-	height:80%;
-	margin:1%;
+footer img.logo{
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
+}
+footer img{  
+	height:95%;
+	margin:1%;
+}
+footer img.gomb {
+	display:block;
+	float:left;
+	height:75%;
+	margin: 1% 3%;
 }
 
 /* ASZTAL */
@@ -92,7 +145,7 @@ main {
 main button.nagy {
 	position:relative;
 	width: 80%;
-	height:18%;
+	height:15%;
 	border-radius: 2vh;
 	background-color:#E4E4E4;
     background-image:linear-gradient(top, #2D2045 0%, #E4E4E4 51%);
@@ -107,18 +160,18 @@ main button.nagy {
     );
     background-attachment:fixed;
 	border: 2px solid black;
-	padding:5%;
+	padding:4%;
 	margin-left: 7%;
-	margin-top: 5%;
+	margin-top: 4%;
  }
 main button img{
 	float:left;
-	height:12vh;
+	height:10vh;
 	margin-top:-2vh;
 }
 main button span{
 	float:left;
-	font-size:6vw;
+	font-size:5.5vw;
 	margin-top:0.8rem;
 	margin-left:6%;
 	color:#93C016;
@@ -126,6 +179,58 @@ main button span{
 	font-variant: small-caps;
 	letter-spacing:.1em;
 	text-shadow: 0 0 5vh #dfdfdf;
+}
+.ugyfel_kivalasztva{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:80vw;
+	--text-align:center;
+	font-size: 3vh;
+	line-height: 4vh;
+	margin-top:5vh;
+}
+.ugyfel_kivalasztva span{
+	float:left;
+}
+.ugyfel_kivalasztva div{
+	display:table;
+	margin-left:22vw;
+	font-variant: initial;
+}
+ul { position:relative;display:block;
+	margin-left:auto;
+	margin-right:auto;width:90vw; }
+ul li {
+	--height:10vh;
+	
+	border:0.7vh solid #505050;
+	border-radius: 1vh;
+	margin: 2vh;
+	font-size:3vh;
+	line-height:4vh;
+}
+li ol{
+	float:left;
+	width:15%;
+	color:#E4E4E4;
+	padding-top:3vh;
+	font-size:4vh;
+	text-align:center;
+	background: #3478af;
+	height:100%;
+	padding-bottom:3vh;
+}
+li div{
+	padding:2vh;
+	display:table;
+	margin-left:10vw;
+}
+
+.foto {
+	width:90%;
+	border: 2px solid #111111;
+	margin: 3vh 0;
 }
 
 @keyframes fade {

@@ -10,14 +10,41 @@
         
     </head>
     <body>
-        <oldal id="1">
+        
+        <oldal id="-1" style="display:block;">
+			<header class="design">
+				<img src="img/logo.png"/>
+				<h1>Belépés</h1>
+			</header>
+			<main>
+				<div class="login">
+					<span>Azonosító : </span>
+					<input type="text" maxlength="20" />
+					<br><br>
+					<span>Jelszó : </span>
+					<input type="password" maxlength="20" />
+					<br><br>
+					<img id="auto_login" src="img/beki0.png"><span style="width:40vw;">Emlékezzen rám</span>
+					<br><br>
+					<button onclick="login();">Belépés</button>
+				</div>
+			</main>	
+			<footer>
+				<img src="img/ikon/tel.png"/ style="float:right;">
+				<img src="img/diginstore-feher.png"/ class="logo"> 
+			</footer>		
+		</oldal>
+        
+        
+<!-- --------------------------------------------------------------------------------------------------------- -->
+        <oldal id="0">
 			<header class="design">
 				<h1>CRM DigInStore</h1>
 				<img src="img/menu.png" style="float:right;">
 			</header>
 		
 			<main>
-				<button id="fomenu_felmeres" class="nagy">
+				<button id="fomenu_felmeres" class="nagy" onclick="oldal(1)">
 					<img src="img/ikon/checklist.png" />
 					<span>Felmérés</span>
 				</button>
@@ -33,13 +60,146 @@
 					<img src="img/ikon/log.png" />
 					<span>Bejegyzések</span>
 				</button>
+				
+				<div class="ugyfel_kivalasztva">
+					<span style="font-weight:bold;">Ügyfél : </span><div>Trafikmutyi Bt.,<br>1234 Jászkarafaszajenő,<br>Megoldjukokosba u. 1.</div>
+				</div>
 			</main>
-		
 			<footer>
-				<img src="img/diginstore-feher.png"/>
+				 <img src="img/ikon/tel.png"/ style="float:right;">
+				<img src="img/diginstore-feher.png"/ class="logo">
 			</footer>
-		</oldal>	
-			
+		</oldal>
+		
+		
+<!-- --------------------------------------------------------------------------------------------------------- -->		
+		<oldal id="1">
+			<header class="design">
+				<img src="img/ikon/vissza.png" onclick="vissza();">
+				<h1>Felmérés</h1>
+				<img src="img/menu.png" style="float:right;">
+			</header>
+			<main>
+				
+			</main>	
+			<footer>
+				<img src="img/ikon/tel.png"/ style="float:right;">
+				<img src="img/gomb/foto.png"/ class="gomb" onclick="uj_foto(1);">
+				<img src="img/gomb/log.png"/ class="gomb" onclick="uj_bejegyzes(1);";>
+			</footer>		
+		</oldal>
+		
+<!-- --------------------------------------------------------------------------------------------------------- -->		
+<!-- --------------------------------------------------------------------------------------------------------- -->		
+		<oldal id="100">
+			<header class="design">
+				
+				<h1>Ügyfél kiválasztása</h1>
+				<img src="img/menu.png" style="float:right;">
+			</header>
+			<main>
+				<button id="pos_legutobbi" class="nagy" onclick=" oldal(101)">
+					<img src="img/ikon/last.png" />
+					<span>Legutóbbiak</span>
+				</button>
+				<button id="pos_gps" class="nagy" onclick="oldal(102)">
+					<img src="img/ikon/gps.png" />
+					<span>GPS keresés</span>
+				</button>
+				<button id="pos_irsz" class="nagy" onclick="oldal(103)">
+					<img src="img/ikon/zip.png" />
+					<span>Irányítószám</span>
+				</button>
+				<button id="pos_lista" class="nagy" onclick="oldal(104)">
+					<img src="img/ikon/customers.png" />
+					<span>Ügyféllistából</span>
+				</button>
+				<button id="pos_qr" class="nagy" onclick="oldal(105)">
+					<img src="img/ikon/scan.png" />
+					<span>QR kód beolvasása</span>
+				</button>
+			</main>	
+			<footer>
+				<img src="img/ikon/tel.png"/ style="float:right;">
+				<img src="img/diginstore-feher.png"/ class="logo">
+			</footer>		
+		</oldal>
+<!-- --------------------------------------------------------------------------------------------------------- -->		
+		<oldal id="101">
+			<header class="design">
+				<img src="img/ikon/vissza.png" onclick="vissza();">
+				<h1>Legutóbbi ügyfelek</h1>
+				<img src="img/ikon/last.png" style="float:right;">
+			</header>
+			<main>
+				<ul>
+					<li onclick="kivalaszt();"><ol>1.</ol><div>Trafikmutyi Bt.,<br>1234 Jászkarafaszajenő,<br>Megoldjukokosba u. 1.</div></li>
+					<li onclick="kivalaszt();"><ol>2.</ol><div>Füstölj El Kft.,<br>1234 Bivalybasznád,<br>Cigi köz. 8.</div></li>
+					<li onclick="kivalaszt();"><ol>3.</ol><div>Köhögős Bt.,<br>1234 Alsószarfalva,<br>Tűdőgyógyász út. 1.</div></li>
+				</ul>
+			</main>	
+			<footer>
+				<img src="img/ikon/tel.png"/ style="float:right;">
+			</footer>		
+		</oldal>
+<!-- --------------------------------------------------------------------------------------------------------- -->		
+		<oldal id="102">
+			<header class="design">
+				<img src="img/ikon/vissza.png" onclick="vissza();">
+				<h1>GPS keresés</h1>
+				<img src="img/ikon/gps.png" style="float:right;">
+			</header>
+			<main>
+				
+			</main>	
+			<footer>
+				<img src="img/ikon/tel.png"/ style="float:right;">
+			</footer>		
+		</oldal>
+<!-- --------------------------------------------------------------------------------------------------------- -->		
+		<oldal id="103">
+			<header class="design">
+				<img src="img/ikon/vissza.png" onclick="vissza();">
+				<h1>Irányítószámos keresés</h1>
+				<img src="img/ikon/zip.png" style="float:right;">
+			</header>
+			<main>
+				
+			</main>	
+			<footer>
+				<img src="img/ikon/tel.png"/ style="float:right;">
+			</footer>		
+		</oldal>
+<!-- --------------------------------------------------------------------------------------------------------- -->		
+		<oldal id="104">
+			<header class="design">
+				<img src="img/ikon/vissza.png" onclick="vissza();">
+				<h1>Ügyféllista</h1>
+				<img src="img/ikon/customers.png" style="float:right;">
+			</header>
+			<main>
+				
+			</main>	
+			<footer>
+				<img src="img/ikon/tel.png"/ style="float:right;">
+			</footer>		
+		</oldal>
+<!-- --------------------------------------------------------------------------------------------------------- -->
+		<oldal id="105">
+			<header class="design">
+				<img src="img/ikon/vissza.png" onclick="vissza();">
+				<h1>QR kódos azonosítás</h1>
+				<img src="img/ikon/scan.png" style="float:right;">
+			</header>
+			<main>
+				
+			</main>	
+			<footer>
+				<img src="img/ikon/tel.png"/ style="float:right;">
+			</footer>		
+		</oldal>		
+		
+							
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">

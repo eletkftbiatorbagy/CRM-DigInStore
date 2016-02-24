@@ -14,7 +14,8 @@
   <preference name="detect-data-types" value="true"/>
   <preference name="exit-on-suspend" value="false"/>
   <preference name="show-splash-screen-spinner" value="true"/>
-  <preference name="auto-hide-splash-screen" value="true"/>
+  <preference name="auto-hide-splash-screen" value="false"/>
+  
   <preference name="disable-cursor" value="false"/>
   <preference name="android-minSdkVersion" value="14"/>
   <preference name="android-installLocation" value="auto"/>
@@ -78,5 +79,5 @@
   </platform>
   
   <plugin name="net.roughshod.plugins.barcodescanner" spec="3.0.0" source="pgb" />
-  
+  <plugin name="org.apache.cordova.camera" spec="0.3.6" source="pgb" />
 </widget>
