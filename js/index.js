@@ -109,7 +109,14 @@ function uj_foto(ablak)
     	navigator.camera.getPicture(foto_kesz, hiba, { quality: 75,
     						destinationType: Camera.DestinationType.DATA_URL,
     						encodingType: Camera.EncodingType.JPEG,
-    						saveToPhotoAlbum: false
+    						saveToPhotoAlbum: false,
+    						popoverOptions: new CameraPopoverOptions(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY)
 		});
 	}, 0);
 }
+
+// Reposition the popover if the orientation changes.
+ window.onorientationchange = function() {
+     var cameraPopoverOptions = new CameraPopoverOptions(0, 0, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
+     cameraPopoverHandle.setPosition(cameraPopoverOptions);
+ }
