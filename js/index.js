@@ -105,6 +105,7 @@ function uj_foto(ablak)
 						};
 
 	setTimeout(function() {
+    	console.log("FOTÓZÁS +");
     	navigator.camera.getPicture(foto_kesz, hiba, { quality: 75,
     						destinationType: Camera.DestinationType.DATA_URL,
     						encodingType: Camera.EncodingType.JPEG,
