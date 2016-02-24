@@ -8,7 +8,7 @@ var app = 	{
 				},
 	
 				onDeviceReady: function() {
-	
+					console.log("CAMERA : "+navigator.camera);
 					setTimeout(function() {
 						navigator.splashscreen.hide();
 					}, 3000);
@@ -95,20 +95,31 @@ function kivalaszt()
 }
 
 
+function hiba(message)
+{
+	console.log ("HIBA : "+message);
+}
+
 function uj_foto(ablak)
 {
 	var foto_kesz = function(imageData) {
 							var img = document.createElement("img");
-								img.src = imageData;
+								img.src = "data:image/jpeg;base64," + imageData;
 								img.className = "foto";
 							oldal_object(ablak).getElementsByTagName("main")[0].appendChild(img);		
 						};
 
 	setTimeout(function() {
     	console.log("FOTÓZÁS +");
-    	navigator.camera.getPicture(foto_kesz, hiba, { quality: 75,
+    	navigator.camera.getPicture(foto_kesz, hiba, { quality: 50,
     						destinationType: Camera.DestinationType.DATA_URL,
+    						sourceType : Camera.PictureSourceType.CAMERA,
+    						allowEdit : true,
     						encodingType: Camera.EncodingType.JPEG,
+    						targetWidth: 700,
+  							targetHeight: 394,
+  							correctOrientation: true,
+  							cameraDirection: Camera.Direction.BACK,
     						saveToPhotoAlbum: false,
     						popoverOptions: new CameraPopoverOptions(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY)
 		});
