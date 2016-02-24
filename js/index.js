@@ -24,7 +24,15 @@ var app = 	{
 })();
 
 
-
+function iscroll_init()
+{
+	var oldalak = document.getElementsByTagName("oldal");
+	for (var o=0; o<oldalak.length; o++)
+	{
+		var main = oldalak[o].getElementsByTagName("main")[0];
+		var myscroll = new IScroll(main);
+	}
+}
 
 var OLDAL = 0;
 var Oldal_cache = [];
@@ -111,7 +119,7 @@ function uj_foto(ablak)
 
 	setTimeout(function() {
     	console.log("FOTÓZÁS +");
-    	navigator.camera.getPicture(foto_kesz, hiba, { quality: 50,
+    	navigator.camera.getPicture(foto_kesz, hiba, { quality: 75,
     						destinationType: Camera.DestinationType.DATA_URL,
     						sourceType : Camera.PictureSourceType.CAMERA,
     						allowEdit : true,
@@ -128,7 +136,7 @@ function uj_foto(ablak)
 
 // Reposition the popover if the orientation changes.
  window.onorientationchange = function() {
-     var cameraPopoverOptions = new CameraPopoverOptions(0, 0, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
+     var cameraPopoverOptions = new CameraPopoverOptions(0, 0, 700, 394, Camera.PopoverArrowDirection.ARROW_ANY);
      cameraPopoverHandle.setPosition(cameraPopoverOptions);
  }
  
