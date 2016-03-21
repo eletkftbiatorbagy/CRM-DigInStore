@@ -35,7 +35,7 @@
 			</footer>		
 		</oldal>
         
-        
+<!-- --------------------------------------------------------------------------------------------------------- -->		        
 <!-- --------------------------------------------------------------------------------------------------------- -->
         <oldal id="0">
 			<header class="design">
@@ -49,8 +49,8 @@
 						<img src="img/ikon/checklist.png" />
 						<span>Felmérés</span>
 					</button>
-					<button id="fomenu_telepites" class="nagy">
-						<img src="img/ikon/scan.png" />
+					<button id="fomenu_telepites" class="nagy" ontouchstart="oldal(2)">
+						<img src="img/ikon/mech.png" />
 						<span>Telepítés</span>
 					</button>
 					<button id="fomenu_karbantartas" class="nagy">
@@ -73,7 +73,7 @@
 			</footer>
 		</oldal>
 		
-		
+<!-- --------------------------------------------------------------------------------------------------------- -->				
 <!-- --------------------------------------------------------------------------------------------------------- -->		
 		<oldal id="1">
 			<header class="design">
@@ -91,6 +91,85 @@
 			</footer>		
 		</oldal>
 		
+<!-- --------------------------------------------------------------------------------------------------------- -->		
+<!-- --------------------------------------------------------------------------------------------------------- -->		
+		<oldal id="2">
+			<header class="design">
+				<img src="img/ikon/vissza.png" ontouchstart="vissza();">
+				<h1>Telepítés</h1>
+				<img src="img/ikon/mech.png" style="float:right;" ontouchstart="oldal(999);">
+			</header>
+			<main>
+				<div>
+					<button id="fomenu_munkalap" class="nagy" ontouchstart="oldal(21)">
+						<img src="img/ikon/eng.png" />
+						<span>Munkalap</span>
+					</button>
+					<button id="fomenu_felmeres" class="nagy" ontouchstart="oldal(22)">
+						<img src="img/ikon/scan.png" />
+						<span>Készülék aktiválás</span>
+					</button>
+					<button id="fomenu_feljegyzesek" class="nagy"  ontouchstart="oldal(23)">
+						<img src="img/ikon/log.png" />
+						<span>Feljegyzések</span>
+					</button>
+				</div>
+			</main>	
+			<footer>
+				<img src="img/ikon/tel.png"/ style="float:right;">
+				<img src="img/diginstore-feher.png"/ class="logo">
+			</footer>		
+		</oldal>
+<!-- --------------------------------------------------------------------------------------------------------- -->		
+		<oldal id="21">
+			<header class="design">
+				<img src="img/ikon/vissza.png" ontouchstart="vissza();">
+				<h1>Munkalap</h1>
+				<img src="img/ikon/eng.png" style="float:right;" ontouchstart="oldal(999);">
+			</header>
+			<main>
+				<div>
+					
+				</div>
+			</main>	
+			<footer>
+				<img src="img/ikon/tel.png"/ style="float:right;">
+				<img src="img/diginstore-feher.png"/ class="logo">
+			</footer>		
+		</oldal>
+<!-- --------------------------------------------------------------------------------------------------------- -->		
+		<oldal id="22">
+			<header class="design">
+				<img src="img/ikon/vissza.png" ontouchstart="vissza();">
+				<h1>Készülék aktiválás</h1>
+				<img src="img/ikon/scan.png" style="float:right;" ontouchstart="oldal(999);">
+			</header>
+			<main>
+				<div>
+					<h2>Útmutató</h2>
+					<p>
+						A kijelző első bekapcsolásakor rögtön kapcsolódik a hálózatra,
+						és kijelzi a készülék azonosító kódját.<br>
+						Legegyszerűbb a QR kód beolvasása, de ha nem működik a mobil eszköz kamerája,
+						akkor lehetőség van a 8 jegyű azonosító kód megadásával is aktiválni a készüléket.<br>
+						A sikeres aktiválásról visszajelzést kapunk.
+					</p>
+					
+					<button id="gomb_qr" class="kozepes" ontouchstart="scan()">
+						<img src="img/ikon/scan.png" />
+						<span>QR kód beolvasása</span>
+					</button>
+					<input id="reg_num" class="kozepes" type="number" maxlength="8"/>
+					<button id="gomb_kod" class="kicsi" ontouchstart="scan()">
+						<span>Aktiválás kóddal</span>
+					</button>
+				</div>
+			</main>	
+			<footer>
+				<img src="img/ikon/tel.png"/ style="float:right;">
+				<img src="img/diginstore-feher.png"/ class="logo">
+			</footer>		
+		</oldal>		
 <!-- --------------------------------------------------------------------------------------------------------- -->		
 <!-- --------------------------------------------------------------------------------------------------------- -->		
 		<oldal id="100">

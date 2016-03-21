@@ -166,12 +166,57 @@ main button.nagy {
 	margin-left: 7%;
 	margin-top: 4%;
  }
+main button.kozepes {
+	position:relative;
+	width: 60%;
+	height:11vh;
+	border-radius: 2vh;
+	background-color:#E4E4E4;
+    background-image:linear-gradient(top, #2D2045 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #2D2045 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #2D2045 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #4D4065),
+        color-stop(0.51, #4D4065)
+    );
+    background-attachment:fixed;
+	border: 2px solid black;
+	padding:3%;
+	margin-left: 17%;
+	margin-top: 4%;
+ } 
+main button.kicsi {
+	position:relative;
+	--float: right;
+	width: 35%;
+	height:11vh;
+	border-radius: 2vh;
+	background-color:#E4E4E4;
+    background-image:linear-gradient(top, #2D2045 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #2D2045 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #2D2045 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #4D4065),
+        color-stop(0.51, #4D4065)
+    );
+    background-attachment:fixed;
+	border: 2px solid black;
+	padding:3%;
+	--margin-right: 23%;
+	margin-top: 4%;
+ } 
 main button img{
 	float:left;
 	height:10vh;
 	margin-top:-2vh;
 }
-main button span{
+main button.nagy span{
 	float:left;
 	font-size:5.5vw;
 	margin-top:0.8rem;
@@ -181,6 +226,59 @@ main button span{
 	font-variant: small-caps;
 	letter-spacing:.1em;
 	text-shadow: 0 0 5vh #dfdfdf;
+}
+main button.kozepes span{
+	font-size:5vw;
+	color:#93C016;
+	font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+	font-variant: small-caps;
+	letter-spacing:.1em;
+	text-shadow: 0 0 5vh #dfdfdf;
+	transform: translate(-50%, -50%);
+    width: 39vw;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 62%;
+    line-height: 3.5vh;
+}
+main button.kicsi span{
+	font-size:4.2vw;
+	color:#93C016;
+	font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+	font-variant: small-caps;
+	letter-spacing:.1em;
+	text-shadow: 0 0 5vh #dfdfdf;
+	transform: translate(-50%, -50%);
+    width: 25vw;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    line-height: 3.5vh;
+}
+main h2{
+	font-size: 3vh;
+	font-weight:bold;
+	text-decoration: underline;
+	margin:2vh;
+}
+main p{
+	margin:2vh;
+	text-align:justify;
+	font-size: 2vh;
+	line-height:2.8vh;
+	width:93vw;
+	text-transform: initial;
+}
+main input.kozepes{
+	width: 45vw;
+	height:5vh;
+	font-size: 4vh;
+	padding: 0.5vh 2vw;
+	margin: 2vh 4vw;
+	transform: translate(0%, -25%);
+	letter-spacing:2vw;
 }
 .ugyfel_kivalasztva{
 	display:block;

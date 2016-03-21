@@ -152,7 +152,8 @@ function uj_foto(ablak)
  	var cim = document.createElement("span");
  		cim.className = "bejegyzes_cim";
  	var d = new Date();
- 		cim.innerHTML = "Szerző: " + "<strong>Kiss Attila<strong>" + "&nbsp;&nbsp;&nbsp;&nbsp;Bejegyzés dátuma : <strong>"+ d.getFullYear() + "." + d.getMonth()+1 + "." + d.getDate() +"&nbsp;&nbsp;" + d.getHours() + ":" + d.getMinutes()+"</strong>";
+ 	var timestamp = t.getFullYear() + "-" + ("0" + (t.getMonth() + 1)).slice(-2) + "-" + ("0" + (t.getDate() + 1)).slice(-2) + "&nbsp;&nbsp;&nbsp" + ("0"+t.getHours()).slice(-2) + ":" + ("0"+t.getMinutes()).slice(-2);
+ 		cim.innerHTML = "Szerző: " + "<strong>Kiss Attila<strong>" + "&nbsp;&nbsp;&nbsp;&nbsp;Bejegyzés dátuma : <strong>"+ timestamp +"</strong>";
  	var txtarea = document.createElement("textarea");
  	    txtarea.className = "txtarea";
  	var main = oldal_object(ablak).getElementsByTagName("main")[0];
