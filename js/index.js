@@ -99,6 +99,7 @@ function scan(){
 
 var kijelzo_aktivalas = function(number) {
 	if (!number) { number=document.getElementById("reg_num").value; }
+	console.log("SCAN: "+number);
 	ajax_hivas("http://server.diginstore.hu/code/kijelzo_aktivalas.php?number="+number+"&telephely="+"1","kijelzo_aktivalva","kijelzo_aktivalas");
 }
 var kijelzo_aktivalva = function(resp){
