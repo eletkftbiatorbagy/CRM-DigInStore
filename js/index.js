@@ -99,10 +99,10 @@ function scan(){
 
 var kijelzo_aktivalas = function(number) {
 	if (!number) { number=document.getElementById("reg_num").value; }
-	ajax_hivas("http://server.diginstore.hu/code/kijelzo_aktivalas.php?number="+number+"&telephely="+"1",kijelzo_aktivalva,"kijelzo_aktivalas");
+	ajax_hivas("http://server.diginstore.hu/code/kijelzo_aktivalas.php?number="+number+"&telephely="+"1","kijelzo_aktivalva","kijelzo_aktivalas");
 }
-var kijelzo_aktivalva = function(){
-	
+var kijelzo_aktivalva = function(resp){
+	console.log("Aktiválás : "+resp);
 	setTimeout(function(){ FreeCallback("kijelzo_aktivalas"); },1000);
 }
 
