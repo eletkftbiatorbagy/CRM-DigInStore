@@ -85,19 +85,25 @@ function vissza()
 	oldal(elozo_oldal,true);
 }
 
-function scan(){
+function scan(callback){
 	cordova.plugins.barcodeScanner.scan(
-      function (result) {
-          alert("We got a barcode\n" +
-                "Result: " + result.text + "\n" +
-                "Format: " + result.format + "\n" +
-                "Cancelled: " + result.cancelled);
+      function (result,callback) {				// result.text, result.format, result.cancelled
+          if (!result.cancelled) { callback(result.text); }
       }, 
       function (error) {
           alert("Scanning failed: " + error);
       }
    );
 	
+}
+
+var kijelzo_aktivalas = function(number) {
+	if (!number) { number=document.getElementById("reg_num").value; }
+	ajax_hivas("http://server.diginstore.hu/code/kijelzo_aktivalas.php?number="+number+"&telephely="+"1",kijelzo_aktivalva,"kijelzo_aktivalas");
+}
+var kijelzo_aktivalva = function(){
+	
+	setTimeout(function(){ FreeCallback("kijelzo_aktivalas"); },1000);
 }
 
 
