@@ -85,10 +85,10 @@ function vissza()
 	oldal(elozo_oldal,true);
 }
 
-function scan(callback){
+function scan(){
 	cordova.plugins.barcodeScanner.scan(
       function (result,callback) {				// result.text, result.format, result.cancelled
-          if (!result.cancelled) { callback(result.text); }
+          if (!result.cancelled) { kijelzo_aktivalas(result.text); }
       }, 
       function (error) {
           alert("Scanning failed: " + error);
